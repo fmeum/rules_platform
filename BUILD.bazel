@@ -12,6 +12,7 @@ filegroup(
         "LICENSE",
         "MODULE.bazel",
         "//platform_data:srcs",
+        "//transitions:srcs",
     ],
     visibility = ["//visibility:public"],
 )

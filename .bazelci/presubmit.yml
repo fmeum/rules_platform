@@ -1,8 +1,18 @@
 ---
+matrix:
+  bazel:
+    - 7.x
+    - 8.x
+    - 9.x
+    - last_green
 
 tasks:
   ubuntu2004:
+    name: "Bazel ${{ bazel }}"
+    platform: ubuntu2004
+    bazel: ${{ bazel }}
     build_targets:
       - "//..."
     test_targets:
       - "//platform_data/test/..."
+      - "//transitions/test/..."
